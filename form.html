@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showalert() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if(username == "" || password == ""){
+                alert('data harus diisi');
+            }else{
+                alert('Hallo '+username)
+            }
+        }
+    </script>
+    <style>
+        header {
+            background-color: green;
+            text-align: center;
+            padding: 50px;
+            font-size: 25px;
+        }
+
+       .left {
+        width: 25%;
+       }
+       .right{
+        width: 75%;
+       }
+        .mycontainer {
+            text-align: center;
+            display: flex;
+        }
+            
+    </style>
+</head>
+
+<body>
+    <header>JUDUL</header>
+    <div class="mycontainer">
+        <div style="background-color: beige;" class="left">
+            <h3>MENU</h3>
+            <ul>
+                <li><a href="home.html">home</a></li>
+                <li><a href="contact.html">contact</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="form.html">signup</a></li>
+            </ul>
+        </div>
+        <div style="background-color: aliceblue; class="left">
+            <h3 style="padding: 25px;">login</h3>
+            <form action="javascript:void(0)">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username"><br>
+            <label for="password">Password</label><br>
+            <input type="text" id="password" name="Password"><br><br>
+            <input type="submit" value="submit" onclick="showalert()"/>
+            </form>
+            <p>If you click the "Submit" button, the form-data will be sent to a page called "unknown".</p>
+
+        </div>
+    </div>
+</body>
+
+</html>
